@@ -1,0 +1,22 @@
+# Proyecto: Procesamiento Distribuido con Archivos de Texto
+## Distribución del Equipo
+
+### 1. Paco - El Arquitecto (Servidor)
+- Archivo principal: `servidor.py`
+- Misión: Administrar el directorio `cola_de_tareas` y asignar los trabajos.
+- Reto técnico (Extensión): Modificar el código para asignar tareas a workers específicos y crear una estrategia para evitar colisiones cuando varios workers intenten leer a la vez.
+
+### 2. Eva - La Generadora (Cliente y Logs)
+- Archivo principal: `cliente.py`
+- Misión: Crear las tareas en el directorio para alimentar el sistema.
+- Reto técnico (Extensión): Desarrollar el sistema de logs. Tiene que programar la lógica para que los workers escriban el historial de lo que van procesando en un archivo de texto global.
+
+### 3. Lucía - El Escuadrón (Workers Base y Tolerancia a Fallos)
+- Archivos principales: `worker_1.py`, `worker_2.py`
+- Misión: Adaptar los workers base para que lean y procesen tareas en paralelo a diferentes velocidades.
+- Reto técnico (Extensión): Implementar la tolerancia a fallos. Debe simular que un worker se "cae" en mitad de una tarea y lograr que otro worker detecte esa tarea a medias y la termine.
+
+### 4. Rafa - El Guionista del Caos (Workers Ridículos)
+- Archivos principales: Nuevos scripts de workers (ej. `worker_hacker.py`, `worker_vago.py`)
+- Misión: Darle personalidad al proyecto y encargarse de la originalidad.
+- Reto técnico (Extensión): Integrar workers con comportamientos anómalos (que borren archivos, que ignoren tareas) y escribir mensajes de error creativos y graciosos para los logs que programará Eva. También liderará la presentación en clase.
